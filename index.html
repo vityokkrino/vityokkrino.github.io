@@ -13,7 +13,7 @@
     
     <link type="text/css" rel="stylesheet" href="https://novaposhta.ua/protected/themes/novaposhta/assets/css/jquery.jscrollpane.css" />
     <link type="text/css" rel="stylesheet" href="https://novaposhta.ua/protected/themes/novaposhta/assets/css/jquery-ui-1.9.1.custom.min.css" />
-    <script type="text/javascript" src = "https://paygate.taslink.com.ua/oneclick/oneclick.min.js"> </script>
+
     <script type="text/javascript" src="https://novaposhta.ua/protected/themes/novaposhta/assets/js/jquery.min-1.12.4.js"></script>
     <script type="text/javascript" src="https://novaposhta.ua/protected/themes/novaposhta/assets/js/jquery-migrate-1.1.1.js"></script>
     
@@ -33,9 +33,29 @@
         var assetsUrl = 'https://novaposhta.ua/protected/themes/novaposhta/assets';
         var currentLang = 'ru';
     </script>
-	<script type="text/javascript"> 
-			alert("Javacript подключен");
-	</script>
+	<style type="text/css">
+	.buttonn{
+	width: 168px;
+    height: 40px;
+    left: 462px;
+    top: 50px;
+
+    background: #E02F2F;
+    border: 1px solid #EB5757;
+    box-sizing: border-box;
+    /*box-shadow: 0px 4px 8px rgba(224, 47, 47, 0.1), 0px 2px 4px rgba(63, 31, 31, 0.15);*/
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    font-family: "Helvetica";
+    font-weight: Bold;
+    font-size: 12px;
+    line-height: 14px;
+    align-content: Center;
+    -webkit-text-fill-color: #fff;
+	}
+	</style>
     
 </head>
 <body><script type="text/javascript">
@@ -370,41 +390,43 @@ window.appParameters = {};window.appParameters.languageUrl="https://novaposhta.u
             <div class="wrap">
     <div class="clear"></div>
     
-    <form class="track" id="new_track_form" action="https://novaposhta.ua/ru/tracking/" method="GET">
+
     <div class="search-field ">
-        <input data-validate="full" data-allowed-type="alphanumeric" class="allowed-char track_input inp" tabindex="1" placeholder="Введите номер для отслеживания" id="cargo_number_inp" autocomplete="off" type="text" value="" name="cargo_number" />
-        <input name="newtracking" type="text" value="1" hidden>
-        <button id="button" type="submit">Отследить</button>
-        <button id="clear-btn" type="button" hidden></button>
-    </div>
-        </form>
-</div>
-<script>
-    var number = $('.track_input').val();
+	    <form  id="simple-form">
+        <input class="allowed-char track_input " placeholder="Введите номер для отслеживания" type="text" name="name1" id="name1" />
+        
+        <button class="buttonn">Отследить</button>
+       
+    
+    </form>
+	 <script type="text/javascript">
+	var form = document.querySelector('#simple-form');
 
-    if (number.length > 0){
-        $('#button').hide();
-        $('#clear-btn').show();
-    } else {
-        $('#clear-btn').hide();
-        $('#button').show();
-        $('#button').addClass('btn-disable').attr('disabled','disabled');
+function inArray(value, array) {
+    for (var key in array) {
+        if (array[key] === value) {
+            return true;
+        }
     }
-    $('#clear-btn').on('click', function (e) {
-        $('.track_input').val('');
-        $('#clear-btn').hide();
-        $('.not-found').hide();
-        $('#button').show();
-        $('#button').addClass('btn-disable').attr('disabled','disabled');
-        $('.search-field').removeClass('input-error');
-    });
-    $('.track_input').on('keyup paste', function (e) {
-        $('#clear-btn').hide();
-        $('#button').show();
-        $('#button').removeClass('btn-disable').removeAttr('disabled');
-    });
 
-</script>
+    return false;
+}
+
+var values = ['1234', '12345'];
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var input = document.querySelector('#name1');
+
+    if (inArray(input.value, values)) {
+        window.location = 'index'+input.value + '.html';
+    }
+});
+	</script>
+	</div>
+</div>
+
 
                             <div class="banner-field banner-container">
                    <a href = 'http://bit.ly/2Z1mUhM'  target="_blank" class = 'url-banner'>
@@ -418,7 +440,7 @@ window.appParameters = {};window.appParameters.languageUrl="https://novaposhta.u
 </div>
     <span id="Document" hidden></span>
 
-                                                <div class="block_right">
+    <div class="block_right">
     <ul class="fast_icons">
         <li class="fast_icons__track ">
             <div class="track">
