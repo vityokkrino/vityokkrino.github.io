@@ -1,1 +1,146 @@
-svio;SHVB
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Nova Poshta</title>
+	<style type="text/css">
+		body{
+			background-color:#f3f3f3;
+		}
+		.table_blur {
+			background: #f5ffff;
+			border-collapse: collapse;
+			text-align: left;
+			font-size: 14px;
+		}
+		.table_blur th {
+			color: #444444;
+			padding: 10px 15px;
+			position: relative;
+		}
+		.table_blur th:after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 25%;
+			height: 25%;
+			width: 100%;
+			background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+		}
+		.table_blur tr:nth-child(odd) {
+			background: #ebf3f9;
+		}
+		.table_blur td {
+			border: 1px solid #e3eef7;
+			padding: 10px 15px;
+			position: relative;
+			transition: all 0.5s ease;
+		}
+		.table_blur tbody:hover td {
+			color: transparent;
+			text-shadow: 0 0 3px #a09f9d;
+		}
+		.table_blur tbody:hover tr:hover td {
+			color: #444444;
+			text-shadow: none;
+		}
+		.table_blur{
+			margin-left: 25px;
+			margin-right: 25px;
+			
+		}
+		.first{
+			width:50px;
+		}
+		.second{
+			width:50px;
+		}
+		.third{
+			width: 250px;
+		} 
+		.fourth{
+			width: 500px;
+		}
+		.main{
+			margin:0px auto;
+			padding-top:1px;
+			background: white;
+			width:900px;
+			padding-bottom: 10px;
+		}
+		.header{
+			margin: 0 25px;
+		}
+		.header h4{
+			font-size:16px;
+			margin-bottom: 0px;
+		}
+		.header p{
+			font-size:14px;
+			margin-top: 0px;
+		}
+		.header table{
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+
+<div class="main">
+	<div class="header">
+		<h4>Tracking Enquiry</h4>
+		<p>This form allows you to search for tracking details from anywhere within GETOnline.</p>
+		<table>
+			<tr>
+				<th>Shipped on:</th>
+				<td>:</td>
+			</tr>
+			<tr>
+				<th>Destination:</th>
+				<td>:</td>
+			</tr>
+			<tr>
+				<th>Order No:</th>
+				<td>:</td>
+			</tr>
+			<tr>
+				<th>Status:</th>
+				<td>:</td>
+			</tr>
+		</table>
+	</div>
+	<table class="table_blur">
+		<tr>
+			<th class="first">Date</th>
+			<th class="second">Time</th>
+			<th class="third">Location/Supplied via</th>
+			<th class="fourth">Activity</th>
+		</tr>
+		<tr>
+			<td class="first">19 Sep</td>
+			<td class="second">20.3</td>
+			<td class="third">Warsaw Central Hub - POLAND</td>
+			<td class="fourth">23.5</td>
+		</tr>
+		<tr>
+			<td class="first">2</td>
+			<td class="second">50.2</td>
+			<td class="third">40.63</td>
+			<td class="fourth">45.23</td>
+		</tr>
+		<tr>
+			<td class="first">2</td>
+			<td class="second">25.4</td>
+			<td class="third">30.2</td>
+			<td class="fourth">33.3</td>
+		</tr>
+		<tr>
+			<td class="first">3</td>
+			<td class="second">20.4</td>
+			<td class="third">15.6</td>
+			<td class="fourth">22.3</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
